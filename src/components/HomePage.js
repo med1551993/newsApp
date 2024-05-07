@@ -4,10 +4,10 @@ import Card from 'react-bootstrap/Card';
 
 const HomePage = () => {
   return (
-    <section className="w-100 bg-success">
+    <section className="w-100">
     <div className="parent h-75 container my-5">
         <div className="div1">
-            <Card className="text-white h-100 rounded-0">
+            <Card className="text-white h-100 rounded-0 border-0">
               <Card.Img src={image} alt="Card image" className="h-100 rounded-0"/>
               <Card.ImgOverlay>
               <Card.Title>Card title 1</Card.Title>
@@ -19,7 +19,7 @@ const HomePage = () => {
             </Card>
         </div>
         <div className="div2">
-            <Card className="text-white h-100 rounded-0">
+            <Card className="text-white h-100 rounded-0 border-0">
               <Card.Img src={image} alt="Card image" className="h-100 rounded-0"/>
               <Card.ImgOverlay>
               <Card.Title>Card title 2</Card.Title>
@@ -31,7 +31,7 @@ const HomePage = () => {
             </Card>        
         </div>
         <div className="div3">
-            <Card className="text-white h-100 rounded-0">
+            <Card className="text-white h-100 rounded-0 border-0">
               <Card.Img src={image} alt="Card image" className="h-100 rounded-0"/>
               <Card.ImgOverlay>
               <Card.Title>Card title 3</Card.Title>
@@ -43,7 +43,7 @@ const HomePage = () => {
             </Card>
         </div>
         <div className="div4 h-100">
-             <Card className="text-white h-100 rounded-0">
+             <Card className="text-white h-100 rounded-0 border-0">
                 <Card.Img src={image} alt="Card image" className="h-100 rounded-0"/>
                 <Card.ImgOverlay>
                 <Card.Title>Card title 4</Card.Title>
@@ -55,7 +55,7 @@ const HomePage = () => {
             </Card>
         </div>
         <div className="div5">
-             <Card className="text-white h-100 rounded-0">
+             <Card className="text-white h-100 rounded-0 border-0">
               <Card.Img src={image} alt="Card image" className="h-100 rounded-0"/>
               <Card.ImgOverlay>
               <Card.Title>Card title 5</Card.Title>
