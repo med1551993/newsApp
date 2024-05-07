@@ -21,7 +21,7 @@ const NewsBoard = ({ category }) => {
   }, [category]);
 
   return (
-    <div className="container">
+    <div className="container my-4">
      
       <h2 className="text-center">
         Latest <span className="badge bg-danger">News</span>

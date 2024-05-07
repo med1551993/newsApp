@@ -1,11 +1,28 @@
-.flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.parent {
+  display: grid;
+/*   grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); */
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 80vh !important;
+  flex-wrap: wrap;
 }
 
-.flex1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.div1 {
+  grid-area: 1 / 1 / span 2 / span 2;
 }
+.div2 {
+  grid-area: 1 / 3 / span 2 / span 1;
+}
+.div3 {
+  grid-area: 3 / 2 / span  2 / span 2;
+}
+.div4 {
+  grid-area: 3 / 1 / span 2 / span 1;
+}
+.div5 {
+  grid-area: 1 / 4 / span 4 / span 3;
+}
+
+  

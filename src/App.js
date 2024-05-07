@@ -2,6 +2,7 @@ import "./App.css";
 import HomePage from "./components/HomePage";
 import Navbar from "./components/Navbar";
 import NewsBoard from "./components/NewsBoard";
+import Footer from "./components/Footer";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -13,14 +14,15 @@ function App() {
       <BrowserRouter>
         <Navbar setCategory={setCategory} />
         <Routes>
-        <Route path="/" element={<HomePage/>} />
+          <Route path="/" element={<HomePage category={category}/>} />
           <Route path="/business" element={<NewsBoard category={category} />} />
-          <Route path="/entertainment" element={<NewsBoard category={category} />} />
+          <Route path="/entertainment" element={<NewsBoard category={category} />}/>
           <Route path="/health" element={<NewsBoard category={category} />} />
           <Route path="/science" element={<NewsBoard category={category} />} />
           <Route path="/sports" element={<NewsBoard category={category} />} />
-          <Route path="/technology" element={<NewsBoard category={category} />} />
+          <Route path="/technology" element={<NewsBoard category={category} />}/>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   );
