@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = ({ setCategory }) => {
   return (
     <nav
-      className="navbar navbar-expand-lg bg-body-tertiary"
+      className="navbar navbar-expand-lg bg-danger fixed-top"
       data-bs-theme="dark"
     >
       <div className="container">
@@ -13,7 +13,7 @@ const Navbar = ({ setCategory }) => {
           className="navbar-brand"
           onClick={() => setCategory("general")}
         >
-          <span className="badge bg-light text-dark fs-4">NewsMag</span>
+          <span className="text-white text-bold" style={{fontSize:"30px", fontWeight:"600"}}>News <span className="badge bg-light text-danger">Orbit</span> </span>
         </Link>
         <button
           className="navbar-toggler"
@@ -28,7 +28,7 @@ const Navbar = ({ setCategory }) => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item">
+            <li className="nav-item ">
               <Link
                 to="/business"
                 className="nav-link"

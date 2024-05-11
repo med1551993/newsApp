@@ -1,9 +1,10 @@
 import React from "react";
 import news_image from "../assets/news_picture.jpg";
+
 const NewsItem = ({ article }) => {
   return (
    
-    <div className="card bg-dark text-light" style={{ maxWidth: "400px" }}>
+    <div className="card bg-white text-dark border-0 shadow" >
       <img
         src={article.urlToImage ? article.urlToImage : news_image}
         style={{ height: "200px" }}
@@ -20,8 +21,8 @@ const NewsItem = ({ article }) => {
               : "It is information about something that has just happened"}
           </p>
         </div>
-        <div>
-          <a href={article.url} className="btn btn-primary">
+        <div className="mt-4">
+          <a href={article.url} target="_blank" className="card-link">
             Read More
           </a>
         </div>
