@@ -1,5 +1,6 @@
 import React from "react";
 import news_image from "../assets/news_picture.jpg";
+import { MdReadMore } from "react-icons/md";
 
 const NewsItem = ({ article }) => {
   return (
@@ -22,8 +23,8 @@ const NewsItem = ({ article }) => {
           </p>
         </div>
         <div className="mt-4">
-          <a href={article.url} target="_blank" className="card-link">
-            Read More
+          <a href={article.url} target="_blank" className="card-link text-decoration-none text-secondary">
+            Read More <MdReadMore size={30}/>
           </a>
         </div>
       </div>
