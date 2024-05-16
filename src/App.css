@@ -129,10 +129,10 @@ body{
 
 .newsletter-subscribe form .btn:active {
   transform: translateY(1px);
+  background-color: #dc3545 !important;
 }
 
 .newsletter-subscribe form .btn-primary {
-  /* background-color: #055ada !important; */
   background-color: #dc3545;
   color: #fff;
   outline: none !important;
@@ -140,7 +140,6 @@ body{
 
 .newsletter {
   color: #dc3545;
-  /* color: #0062cc !important; */
 }
 
 @media screen and (max-width: 1200px) {

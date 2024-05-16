@@ -4,22 +4,28 @@ import { useState } from "react";
 
 const SecondPart = ({ articles }) => {
   const [nbre, setNbre] = useState(10);
+  const [display, setDisplay] = useState("d-none")
+
+  const addNews = ()=>{
+    setDisplay("d-inline-block")
+    setTimeout(() => {
+      setNbre(nbre+5)
+      setDisplay("d-none")
+    }, "2000");
+   
+  }
 
   const changeMounth = (date) => {
-    let array = [
-      "January",
-      "Februar",
-      "March",
-      "April",
-      "May",
-      "Juin",
-      "July",
-      "August",
-      "September",
-      "Octobre",
-      "November",
-      "December",
-    ];
+    // Creating a date object
+    var today = new Date(date); // yyyy-mm-dd
+
+    // Getting short month name (e.g. "Oct")
+    var month = today.toLocaleString("default", { month: "short" });
+    var upperMonth = month.charAt(0).toUpperCase() + month.slice(1);
+
+    var newDate = date.slice(8,10) + ' ' + upperMonth + ' ' + date.slice(0,4);
+
+    return newDate
   };
 
   return (
@@ -39,7 +45,7 @@ const SecondPart = ({ articles }) => {
                     <p className="card-text">{article.description}</p>
                     <p className="card-text">
                       <small className="text-muted">
-                        {article.publishedAt.slice(0, 10)}
+                        {changeMounth(article.publishedAt.slice(0, 10))}
                       </small>
                     </p>
                   </div>
@@ -61,9 +67,10 @@ const SecondPart = ({ articles }) => {
           {nbre < articles.length ? (
             <button
               type="button"
-              className="btn btn-dark rounded-0"
-              onClick={() => setNbre(nbre + 5)}
+              className="btn btn-dark"
+              onClick={() => addNews()}
             >
+              <span className={`spinner-grow spinner-grow-sm ${display}`} role="status" aria-hidden="true" style={{marginRight:"10px"}}></span>
               Show more
             </button>
           ) : null}

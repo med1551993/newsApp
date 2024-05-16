@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = ({ setCategory }) => {
   return (
     <nav
-      className="navbar navbar-expand-lg bg-danger fixed-top"
+      className="navbar navbar-expand-lg bg-danger fixed-top mb-5"
       data-bs-theme="dark"
     >
       <div className="container">
