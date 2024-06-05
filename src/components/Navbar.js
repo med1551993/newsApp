@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { US } from 'country-flag-icons/react/3x2'
 
 const Navbar = ({ setCategory }) => {
   return (
@@ -26,7 +27,7 @@ const Navbar = ({ setCategory }) => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item ">
               <Link
@@ -79,7 +80,8 @@ const Navbar = ({ setCategory }) => {
                 className="nav-link"
                 onClick={() => setCategory("technology")}
               >
-                technology
+                technology 
+                
               </Link>
             </li>
           </ul>

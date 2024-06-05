@@ -20,7 +20,7 @@ body{
 @media screen and (min-width: 1200px) {
   .parent {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 130px);
   }
 
   .div1 {
@@ -50,7 +50,15 @@ body{
   justify-content: space-between;
 }
 
-.articles_list{
+.second-part .article img{
+  transition: ease-in-out 1s;
+}
+
+.second-part .article:hover img{
+  scale:1.1
+}
+
+.article{
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 

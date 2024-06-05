@@ -4,12 +4,11 @@ import { MdReadMore } from "react-icons/md";
 
 const NewsItem = ({ article }) => {
   return (
-   
-    <div className="card bg-white text-dark border-0 shadow" >
+    <div className="card bg-white text-dark border-0 shadow overflow-hidden hover-zoom">
       <img
         src={article.urlToImage ? article.urlToImage : news_image}
         style={{ height: "200px" }}
-        className="card-img-top"
+        className="card-img-top hover-zoom"
         alt={article.title}
       />
       <div className="card-body">
@@ -23,13 +22,16 @@ const NewsItem = ({ article }) => {
           </p>
         </div>
         <div className="mt-4">
-          <a href={article.url} target="_blank" className="card-link text-decoration-none text-secondary">
-            Read More <MdReadMore size={30}/>
+          <a
+            href={article.url}
+            target="_blank"
+            className="card-link text-decoration-none text-secondary"
+          >
+            Read More <MdReadMore size={30} />
           </a>
         </div>
       </div>
     </div>
-  
   );
 };
 

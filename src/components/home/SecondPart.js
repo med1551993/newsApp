@@ -6,7 +6,7 @@ const SecondPart = ({ articles }) => {
   const [nbre, setNbre] = useState(10);
   const [display, setDisplay] = useState("d-none")
 
-  const addNews = ()=>{
+  const addNewsList = ()=>{
     setDisplay("d-inline-block")
     setTimeout(() => {
       setNbre(nbre+5)
@@ -33,7 +33,7 @@ const SecondPart = ({ articles }) => {
       <div>
         {articles.slice(0, nbre).map((article, index) => (
           <div
-            className="articles_list flex-grow-1 card mb-3 p-3 w-100 border-0 rounded-0"
+            className="article flex-grow-1 card mb-3 p-3 w-100 border-0 rounded-0"
             style={{ minHeight: "230px" }}
             key={index}
           >
@@ -41,7 +41,7 @@ const SecondPart = ({ articles }) => {
               <div className="row g-0">
                 <div className="col-md-8">
                   <div className="card-body pl-0">
-                    <h5 className="card-title">{article.title}</h5>
+                    <h5 className="card-title hover-underlined">{article.title}</h5>
                     <p className="card-text">{article.description}</p>
                     <p className="card-text">
                       <small className="text-muted">
@@ -50,7 +50,7 @@ const SecondPart = ({ articles }) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-4 pr-0 h-100">
+                <div className="col-md-4 pr-0 h-100 overflow-hidden">
                   <img
                     src={article.urlToImage ? article.urlToImage : image}
                     className="img-fluid w-100 h-100"
@@ -68,7 +68,7 @@ const SecondPart = ({ articles }) => {
             <button
               type="button"
               className="btn btn-dark"
-              onClick={() => addNews()}
+              onClick={() => addNewsList()}
             >
               <span className={`spinner-grow spinner-grow-sm ${display}`} role="status" aria-hidden="true" style={{marginRight:"10px"}}></span>
               Show more
